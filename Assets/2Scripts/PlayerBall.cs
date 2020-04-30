@@ -37,7 +37,7 @@ public class PlayerBall : MonoBehaviour
         rigid.AddForce(new Vector3(h,0,v), ForceMode.Impulse);
     }
 
-    void OnCollisionEnter(Collision collision) // 물리 효과를 받게 한다.
+    void OnCollisionEnter(Collision collision) // 충돌 시 생기는 이벤트
     {
         if (collision.gameObject.tag == "Floor") // 만약 이 스크립트가 적용된 오브젝트가 Floor라는 오브젝트를 만나면 진행
             isJump = false;
